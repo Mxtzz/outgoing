@@ -12,6 +12,13 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    router.onBeforeRouteChange = (to: string) => {
+      const token = sessionStorage.getItem('token');
+      if (!token && !to.includes('/login')) {
+        router.go('/outgoing/login')
+        return false
+      }
+      return true
+    }
   }
 } satisfies Theme

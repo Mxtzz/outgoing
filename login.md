@@ -3,6 +3,6 @@ layout: false
 ---
 
 <script setup>
-import Login from './pages/Login.vue'
+import Login from './.vitepress/pages/Login.vue'
 </script>
 <Login />
