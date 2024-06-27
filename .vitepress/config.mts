@@ -13,9 +13,9 @@ export default defineConfig({
       {
         text: 'Marks',
         items: [
-          { text: 'My', link: '/marks/my' },
-          { text: 'Ym', link: '/marks/ym' },
-          { text: 'Whx', link: '/marks/whx' }
+          { text: 'bWF6aGFud2Vu', link: '/marks/my' },
+          { text: 'eXVhbm1lbmc=', link: '/marks/eXVhbm1lbmc=' },
+          { text: 'd2FuZ2hhb3hpbg==', link: '/marks/d2FuZ2hhb3hpbg==' }
         ]
       }
     ],
@@ -26,9 +26,9 @@ export default defineConfig({
         link: '/marks',
         collapsed: false,
         items: [
-          { text: 'Me', link: '/marks/my' },
-          { text: 'Ym', link: '/marks/ym' },
-          { text: 'Whx', link: '/marks/whx' }
+          { text: 'bWF6aGFud2Vu', link: '/marks/my' },
+          { text: 'eXVhbm1lbmc=', link: '/marks/eXVhbm1lbmc=' },
+          { text: 'd2FuZ2hhb3hpbg==', link: '/marks/d2FuZ2hhb3hpbg==' }
         ]
       },
       {
