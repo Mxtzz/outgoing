@@ -4,12 +4,12 @@
       <input
         class=""
         type="password"
-        placeholder="探索世界"
+        placeholder="..."
         v-model="password" 
-        @input="checkPassword"
       />
       <button type="submit"><i class="icon ion-android-arrow-forward"></i></button>
     </div>
+    <div class="click-block" @click="checkPassword"></div>
   </div>
 </template>
 
@@ -21,8 +21,8 @@
   const router = useRouter()
 
   const checkPassword = () => {
-    if (password.value === '888888') {
-      sessionStorage.setItem('token', '888888')
+    if (btoa(password.value) === 'MDIyNA==') {
+      sessionStorage.setItem('token', 'MDIyNA==')
       router.go('/outgoing/')
     }
   };
@@ -88,6 +88,13 @@
     &:hover {
       color: #BFD2FF;
     }
+  }
+  .click-block {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 66px;
   }
 }
 
