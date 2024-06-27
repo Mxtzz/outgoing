@@ -2,6 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import Login from '../components/Login.vue'
 import './style.css'
 
 export default {
@@ -12,8 +13,12 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    app.component('Login', Login)
     router.onBeforeRouteChange = (to: string) => {
-      const token = typeof window !== 'undefined' ? sessionStorage.getItem('token') : '';
+      if ( typeof window === 'undefined') {
+        return true
+      }
+      const token = sessionStorage.getItem('token');
       if (!token && !to.includes('/login')) {
         router.go('/outgoing/login')
         return false

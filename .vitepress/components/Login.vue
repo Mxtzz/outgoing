@@ -14,18 +14,18 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vitepress'
+  import { ref } from 'vue';
+  import { useRouter } from 'vitepress'
 
-const password = ref('');
-const router = useRouter()
+  const password = ref('');
+  const router = useRouter()
 
-const checkPassword = () => {
-  if (password.value === '888888') {
-    sessionStorage.setItem('token', '888888')
-    router.go('/outgoing/')
-  }
-};
+  const checkPassword = () => {
+    if (password.value === '888888') {
+      sessionStorage.setItem('token', '888888')
+      router.go('/outgoing/')
+    }
+  };
 </script>
 
 <style scoped lang="scss">
